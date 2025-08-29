@@ -1,4 +1,6 @@
-# download all saved files here: https://docs.aws.amazon.com/AmazonS3/latest/userguide/download-objects.html#download-multiple-objects
+# NOTE: Replace environment variables (BotToken, chat_id) with your own values
+# Make sure not to hardcode tokens in your script for security reasons.
+
 import json
 import boto3
 from selenium import webdriver
@@ -12,8 +14,6 @@ import datetime
 date = datetime.datetime.now()  # setting up the date and time
 bot = os.environ['BotToken']  # this is bot token
 chat = os.environ['chat_id']  # recipient's chat ID
-# s3_client = boto3.client('s3', 'ap-south-1')
-# bucketName = 'scrapped-data-amazon'
 all_product_data = []
 
 categories = {
